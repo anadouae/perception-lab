@@ -77,3 +77,8 @@ docker run --rm perception-lab --frames 5 --jsonl
 ## License
 
 MIT
+
+## Security & methodology
+
+See [`SECURITY.md`](SECURITY.md) and [`docs/PROJECT_METHODOLOGY.md`](docs/PROJECT_METHODOLOGY.md).
+
