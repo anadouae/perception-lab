@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "perception-lab"
+version = "0.1.0"
+description = "Urban traffic scene analytics — simulated camera-frame detections for Urban Pulse"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Douae El Assal", email = "201406601+anadouae@users.noreply.github.com" }]
+dependencies = [
+  "numpy>=1.26",
+  "confluent-kafka>=2.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+
+[project.scripts]
+perception-lab = "perception_lab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
